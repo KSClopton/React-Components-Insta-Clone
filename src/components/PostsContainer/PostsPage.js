@@ -3,8 +3,6 @@
 import React, {useState} from "react";
 import Post from "./Post";
 import "./Posts.css";
-import dummyData from "../../dummy-data"
-
 
 const PostsPage = (props) => {
     const {postsData} = props
@@ -12,7 +10,7 @@ const PostsPage = (props) => {
   return (
     <div className="posts-container-wrapper">
       {postsData.map((postObj) => {
-        return <Post post={postObj}/>
+        return <Post key={postObj.username} post={postObj}/>
       })
       }
       {
