@@ -5,14 +5,14 @@ import Post from "./Post";
 import "./Posts.css";
 import dummyData from "../../dummy-data"
 
-console.log(dummyData)
+
 const PostsPage = (props) => {
     const {postsData} = props
+    // const [posts, setPosts] = useState(props)
   return (
     <div className="posts-container-wrapper">
-      {
-        postsData.map(postObj => {
-        return <Post key={postObj.username} props={postObj}></Post>
+      {postsData.map((postObj) => {
+        return <Post post={postObj}/>
       })
       }
       {

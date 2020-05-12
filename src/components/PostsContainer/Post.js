@@ -10,7 +10,7 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const { likes, setLikes } = useState(0)
-  return (
+    return (
     <div className="post-border">
       <PostHeader
         username={props.post.username}
